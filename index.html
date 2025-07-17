@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <h1>Expense Tracker</h1>
+    </header>
+
+    <main>
+      <div class="balance">
+        <h2>Your Balance</h2>
+        <p id="balance">₹0</p>
+      </div>
+
+      <div class="summary">
+        <div class="income">
+          <h3>Income</h3>
+          <p id="income">₹0</p>
+        </div>
+        <div class="expense">
+          <h3>Expense</h3>
+          <p id="expense">₹0</p>
+        </div>
+      </div>
+
+      <div class="add-transaction">
+        <h3>Add Transaction</h3>
+        <input type="text" id="desc" placeholder="Description" />
+        <input type="number" id="amount" placeholder="Amount (e.g. 500 or -200)" />
+        <button onclick="addTransaction()">Add</button>
+      </div>
+
+      <div class="history">
+        <h3>Transaction History</h3>
+        <ul id="transaction-list"></ul>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
